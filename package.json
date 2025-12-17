@@ -1,0 +1,14 @@
+{
+  "name": "bitrix24-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fetch 10k Bitrix24 companies via webhook",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "fetch": "node src/fetchCompanies.js",
+    "fetch:pretty": "node src/fetchCompanies.js --pretty"
+  }
+}
