@@ -37,7 +37,7 @@ async function callBitrix(webhookUrl, method, params, opts = {}) {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
       },
-      body,
+      body: body.toString(),
     });
 
     const text = await res.text();

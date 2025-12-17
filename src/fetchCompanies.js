@@ -44,8 +44,6 @@ async function main() {
   const companies = [];
 
   while (companies.length < limit) {
-    const remaining = limit - companies.length;
-
     const payload = {
       order: { ID: 'ASC' },
       filter: {},
@@ -76,7 +74,7 @@ async function main() {
     process.stdout.write(`\rFetched: ${companies.length}`);
 
     // small delay to be gentle with rate limits
-    if (remaining > 0) await sleep(120);
+    await sleep(120);
   }
 
   process.stdout.write('\n');
